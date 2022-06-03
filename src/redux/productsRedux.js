@@ -35,7 +35,7 @@ export const fetchProductsRequest = (perPage = PER_PAGE_DEFAULT) => (dispatch) =
     );
   })
   .catch((error) => {
-    if (error.status === ERROR_TYPE_NOT_FOUND) {
+    if (error.response.status === ERROR_TYPE_NOT_FOUND) {
       dispatch(productsNoId());
     } else {
       throw new Error(error);

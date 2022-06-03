@@ -1,8 +1,10 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import { Wrapper } from './Container.styles';
 
-const ProductsList = (props) => {
+const Container = (props) => {
   return (
     <Wrapper>
       {props.children}
@@ -10,4 +12,8 @@ const ProductsList = (props) => {
   );
 };
 
-export default ProductsList;
+Container.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Container;

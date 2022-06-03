@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
+import PropTypes from 'prop-types';
+
 import {
   PaginationItem,
   Stack
@@ -43,6 +46,11 @@ const Pagination = (props) => {
       />
     </Stack>
   );
+};
+
+Pagination.propTypes = {
+  page: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired
 };
 
 export default Pagination;
