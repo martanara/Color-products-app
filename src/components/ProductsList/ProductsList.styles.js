@@ -14,9 +14,14 @@ const StyledTableRow = styled(({ backgroundColor, ...props }) => (
   `};
 `;
 
-const StyledTableCell = styled(TableCell)`
+const StyledTableCell = styled(({ fontWeight, ...props }) => (
+  <TableCell { ...props } />
+))`
   border: 1px solid #ffffff;
-`
+  ${(props) => props.fontWeight && css`
+    font-weight: ${props.fontWeight};
+  `};
+`;
 
 export {
   StyledTableRow,

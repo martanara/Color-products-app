@@ -10,7 +10,7 @@ import {
 import { 
   StyledTableRow,
   StyledTableCell
- } from './ProductList.styles';
+ } from './ProductsList.styles';
 
 import { fetchProductsRequest, getAllProducts } from '../../redux/productsRedux';
 
@@ -36,9 +36,9 @@ const ProductsList = () => {
           <Table>
             <TableHead>
             <StyledTableRow>
-              <StyledTableCell>Id</StyledTableCell>
-              <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell>Year</StyledTableCell>
+              <StyledTableCell fontWeight={"bold"}>Id</StyledTableCell>
+              <StyledTableCell fontWeight={"bold"}>Name</StyledTableCell>
+              <StyledTableCell fontWeight={"bold"}>Year</StyledTableCell>
             </StyledTableRow>
             </TableHead>
             <TableBody>
